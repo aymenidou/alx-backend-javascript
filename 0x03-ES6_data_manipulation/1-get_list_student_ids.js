@@ -1,4 +1,4 @@
 #!/usr/bin/node
 export default function getListStudentIds(list) {
-  return (typeof (list) !== 'object' ? [] : list.map((elt) => (elt.id)));
+  return (!(list instanceof Array) ? [] : list.map((elt) => (elt.id)));
 }
