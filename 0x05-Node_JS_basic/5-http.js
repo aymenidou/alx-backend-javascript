@@ -8,7 +8,7 @@ const app = http.createServer((req, res) => {
   } else if (req.url === '/students') {
     const databaseName = process.argv[2];
     if (!databaseName) {
-      res.writeHead(500, { 'Content-Type': 'text/plain' });
+      res.writeHead(404, { 'Content-Type': 'text/plain' });
       res.end('Cannot load the database');
       return;
     }
