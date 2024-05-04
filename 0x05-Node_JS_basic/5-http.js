@@ -9,7 +9,7 @@ const app = http.createServer((req, res) => {
     const databaseName = process.argv[2];
     if (!databaseName) {
       res.writeHead(500, { 'Content-Type': 'text/plain' });
-      res.end('Error: Database name not provided.\n');
+      res.end('Cannot load the database');
       return;
     }
 
